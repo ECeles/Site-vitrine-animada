@@ -9,6 +9,7 @@ body {
   background-color: #000;
   color: #fff;
   font-size: 16px;
+  overflow: hidden;
 }
 
 header {
@@ -37,10 +38,74 @@ section {
   background-image: radial-gradient(#7f3d9e, #6d00d9);
   height: 100vh;
   position: relative;
+
+  & .list {
+    width: 70vw;
+    height: 100%;
+    margin: auto;
+    position: relative;
+
+    & .item {
+      position: absolute;
+      inset: 0;
+
+      & .car-img {
+        width: 70%;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+
+        & img {
+          width: 100%;
+          transform: rotate(-18deg);
+        }
+      }
+
+      & .content {
+        position: absolute;
+        right: 100px;
+        width: 70%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        align-items: end;
+        gap: 20px;
+
+        & .car-information {
+          font-weight: bold;
+        }
+
+        & h2 {
+          font-size: 8em;
+          line-height: 1em;
+        }
+
+        & .description {
+          color: #d9d9d9;
+          font-size: 12px;
+          text-align: right;
+          max-width: 400px;
+        }
+
+        & .information {
+          border-radius: 30px;
+          height: 35px;
+          width: 120px;
+          text-transform: uppercase;
+          border: 2px solid #791fd3;
+          background-color: #beff1b;
+          color: #000;
+          cursor: pointer;
+          font-weight: bold;
+        }
+      }
+    }
+  }
 }
 
 .arrows {
-  & botton {
+  & button {
     & img {
       width: 100px;
     }
