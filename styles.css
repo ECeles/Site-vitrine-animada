@@ -103,6 +103,17 @@ section {
     }
   }
   .arrows {
+    width: 70vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -25px);
+    display: flex;
+    justify-content: space-between;
+
+    & button:nth-child(1) {
+      transform: scale(-1);
+    }
     & button {
       & img {
         width: 100px;
@@ -121,5 +132,26 @@ section {
     flex-direction: column;
     justify-content: end;
     gap: 15px;
+
+    & .number {
+      font-size: 5em;
+    }
+
+    & ul {
+      display: flex;
+      gap: 10px;
+
+      & il {
+        width: 50px;
+        height: 5px;
+        background-color: #beff1b;
+        border-radius: 5px;
+        transition: 0.5s;
+      }
+
+      & .active {
+        background-color: #fff;
+      }
+    }
   }
 }
