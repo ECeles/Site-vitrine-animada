@@ -33,6 +33,14 @@ header {
       grid-template-columns: repeat(3, 200px);
     }
   }
+  & li a {
+    color: #fff;
+    text-decoration: none;
+  }
+  & li a:hover {
+    color: #beff1b;
+    font-weight: bold;
+  }
 }
 
 section {
